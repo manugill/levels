@@ -1,6 +1,6 @@
 # Levels
 
-Using AJAX page loading and transitions along with a prev/next navigation, Levels provides a seamless interface
+Levels aims to provide a seamless browsing experiences using AJAX page loading and transitions along with prev/next post navigation.
 
 **[View Demo](http://manugill.github.io/levels/)**
 
@@ -9,14 +9,19 @@ Using AJAX page loading and transitions along with a prev/next navigation, Level
 ### Features
 
 * AJAX page loading with CSS fluid transitions using smoothState.js.
-* Custom Prev/Next Post Navigation (Original: https://gist.github.com/jyek/5141bc6166b01419d43f).
-* Minimal issues
+* Custom Prev/Next Post Navigation.
+* Minimal design following aspects similar to Casper.
+* Supports Ghost 0.5.x
 
-### Compatibility
+#### Browser Compatibility
 
-* Chrome &mdash; &2713;
-* Firefox &mdash; &2713; Minor jittering with loading animations sometimes
-* Safari &mdash; &2713;
-* Opera &mdash; &2713;
-* IE9+ &mdash; &2713;
-* IE8- &mdash; &2717;
+* Chrome &mdash; ✓
+* Firefox &mdash; Mostly (Occassional jittering with in transitions in some versions)
+* Safari &mdash; ✓
+* Opera &mdash; ✓
+* IE9+ &mdash; ✓
+
+#### Credits
+
+* [smoothState.js](https://github.com/weblinc/jquery.smoothState.js)
+* Prev/Next post navigation based on: https://gist.github.com/jyek/5141bc6166b01419d43f by [jyek](https://github.com/jyek)
