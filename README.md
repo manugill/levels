@@ -15,11 +15,11 @@ Levels aims to provide a seamless browsing experiences using AJAX page loading a
 
 #### Browser Compatibility
 
-* Chrome &mdash; ✓
-* Firefox &mdash; Mostly (Occassional jittering with loading in transitions in some versions)
-* Safari &mdash; ✓
-* Opera &mdash; ✓
-* IE9+ &mdash; ✓
+* Chrome ✓
+* Firefox ✓ &mdash; occassional jittering issues with loading transitions in some versions
+* Safari ✓
+* Opera ✓
+* IE9+ ✓
 
 #### Credits
 
