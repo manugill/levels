@@ -1,0 +1,87 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+<article class="{{post_class}} single">
+
+    <header class="post-header {{#if image}}cover" style="background-image: url({{image}}){{/if}}">
+
+        <div class="vertical">
+            <div class="inner">
+
+                <h1 class="post-title">{{title}}</h1>
+                <section class="post-meta">
+                    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                </section>
+
+                {{#if image}}<a href="#content" class="scroll-down"><span class="ion-ios7-arrow-thin-down"></span></a>{{/if}}
+                
+            </div>
+        </div>
+
+    </header>
+
+    <div id="content" class="the-content">
+        <div class="inner">
+
+            <section class="post-content">
+                {{content}}
+            </section>
+
+            <footer class="post-footer">
+
+            {{! Everything inside the #author tags pulls data from the author }}
+            {{#author}}
+
+                <section class="author">
+
+                    {{#if image}}
+                    <figure class="author-image">
+                        <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+                    </figure>
+                    {{/if}}
+                    <h4><a href="{{url}}">{{name}}</a></h4>
+
+                    {{#if bio}}
+                        <p>{{bio}}</p>
+                    {{else}}
+                        <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                    {{/if}}
+                    <div class="author-meta">
+                        {{#if website}}<span class="author-link"><i class="ion-link"></i> <a href="{{website}}">{{website}}</a></span>{{/if}}
+                        {{#if location}}<span class="author-location"><i class="ion-navigate"></i> {{location}}</span>{{/if}}
+                    </div>
+                </section>
+
+            {{/author}}
+
+                <section class="share">
+                    <h4>Share this post</h4>
+                    <a class="ion-social-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                        <span class="hidden">Twitter</span>
+                    </a>
+                    <a class="ion-social-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                        <span class="hidden">Facebook</span>
+                    </a>
+                    <a class="ion-social-googleplus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                        <span class="hidden">Google+</span>
+                    </a>
+                </section>
+
+            </footer>
+
+        </div>
+    </div>
+
+</article>
+
+<span class="post-uuid hidden">{{uuid}}</span>
+<div class="post-bg hidden" style="{{#if image}}background-image: url({{image}}){{/if}}"></div>
+{{/post}}

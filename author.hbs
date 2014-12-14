@@ -1,0 +1,36 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! Everything inside the #author tags pulls data from the author }}
+{{#author}}
+
+<div class="alt-header {{#if cover}}" style="background-image: url({{cover}}){{else}}no-cover{{/if}}">
+
+    <div class="vertical">
+        <div class="inner"> 
+            {{#if image}}
+            <figure class="author-image">
+                <div class="img" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></div>
+            </figure>
+            {{/if}}
+            <h1 class="author-title">{{name}}</h1>
+            <h2 class="author-bio">{{bio}}</h2>
+            <div class="author-meta">
+                {{#if website}}<span class="author-link"><i class="ion-link"></i> <a href="{{website}}">{{website}}</a></span>{{/if}}
+                {{#if location}}<span class="author-location"><i class="ion-navigate"></i> {{location}}</span>{{/if}}
+                <span class="author-stats"><i class="ion-stats-bars"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/author}}
+
+<div class="the-content">
+    <div class="inner post-list" role="main">
+
+        {{! The tag below includes the post loop - partials/loop.hbs }}
+        {{> "loop"}}
+
+    </div>
+</div>

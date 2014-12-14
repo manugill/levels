@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/ionicons.min.css"}}">
+
+    <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,900' rel='stylesheet' type='text/css'>
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body>
+
+<div id="main">
+
+    <div class="wrapper {{body_class}}">
+
+        <header class="main-header">
+            <a href="{{@blog.url}}" class="logo">{{@blog.title}}</a>
+            <nav class="main-nav">
+                <a href="/about/">About</a>
+                <a href="/rss/" class="no-ss"><span class="ion-social-rss"></span></a>
+            </nav>
+        </header>
+
+        <main class="container" role="main">
+
+        {{{body}}}
+
+            <footer class="main-footer">
+                <div class="inner">
+                    <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}.</section>
+                    <section class="poweredby">Published with <a href="https://ghost.org">Ghost</a> &amp; One Theme.</section>
+                    <div class="clearfix"></div>
+                </div>
+            </footer>
+
+        </main>
+
+        {{! Post Nav - only disabled on single pages }}
+        <div class="post-nav prev">
+            <a href="#" class="prev">
+                <h2 class="post-title"></h2>
+                <span class="ion-ios7-arrow-thin-left icon"></span>
+                <div class="bg"></div>
+            </a>
+        </div>
+        <div class="post-nav next">
+            <a href="#" class="next">
+                <h2 class="post-title"></h2>
+                <span class="ion-ios7-arrow-thin-right icon"></span>
+                <div class="bg"></div>
+            </a>
+        </div>
+
+    </div>
+    
+</div>
+
+{{! Loading Animation }}
+<div class="loader">
+    <div class="spinner"></div>
+</div>
+
+    {{! Load Javascript Files }}
+    {{ghost_foot}}
+    <script type="text/javascript" src="{{asset "js/jquery.smoothState.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/app.js"}}"></script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+<div class="alt-header tag">
+
+    <div class="vertical">
+        <div class="inner"> 
+            <h1 class="page-title">{{tag.name}}</h1>
+            <h2 class="page-description">A {{pagination.total}}-post collection</h2>
+        </div>
+    </div>
+</div>
+
+<div class="the-content">
+    <div class="inner post-list" role="main">
+
+        {{! The tag below includes the post loop - partials/loop.hbs }}
+        {{> "loop"}}
+
+    </div>
+</div>
