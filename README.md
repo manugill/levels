@@ -1,4 +1,4 @@
-# Levels
+# Levels — Ghost Theme
 
 Levels aims to provide a seamless browsing experiences using AJAX page loading and transitions along with prev/next post navigation.
 
@@ -10,16 +10,11 @@ Levels aims to provide a seamless browsing experiences using AJAX page loading a
 
 * AJAX page loading with CSS fluid transitions using smoothState.js.
 * Custom Prev/Next Post Navigation.
-* Minimal design following aspects similar to Casper.
 * Supports Ghost 0.5.x
 
 #### Browser Compatibility
-
-* Chrome ✓
-* Firefox ✓ &mdash; occassional jittering issues with loading transitions in some versions
-* Safari ✓
-* Opera ✓
 * IE9+ ✓
+* Everything else ✓
 
 #### Credits
 
