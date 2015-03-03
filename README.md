@@ -6,7 +6,7 @@
 * Custom Prev/Next Post Navigation.
 * Supports Ghost 0.5.x
 
-**[View Demo](klassio.com/demo/levels/)**
+**[View Demo](http://klassio.com/demo/levels/)**
 
 **[Download Levels](https://github.com/manugill/levels/archive/master.zip)**
 
