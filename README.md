@@ -1,16 +1,14 @@
 # Levels — Ghost Theme
 
-Levels aims to provide a seamless browsing experiences using AJAX page loading and transitions along with prev/next post navigation.
-
-**[View Demo](http://manugill.github.io/levels/)**
-
-**[Download Levels](https://github.com/manugill/levels/archive/master.zip)**
-
 ### Features
 
 * AJAX page loading with CSS fluid transitions using smoothState.js.
 * Custom Prev/Next Post Navigation.
 * Supports Ghost 0.5.x
+
+**[View Demo](klassio.com/demo/levels/)**
+
+**[Download Levels](https://github.com/manugill/levels/archive/master.zip)**
 
 #### Browser Compatibility
 * IE9+ ✓
